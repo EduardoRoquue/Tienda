@@ -28,6 +28,7 @@ namespace Tienda.PL
             MessageBox.Show("Exito ");
             //Utilizar DAL ... Informacion de la GUI
             oProductosDAL.Agregar(RecuperarInformacion());
+            dgvConsultas.DataSource = oProductosDAL.MostrarProductos().Tables[0];
         }
 
         private ProductoBLL RecuperarInformacion()
@@ -44,6 +45,8 @@ namespace Tienda.PL
 
             int Cantidad = 0; int.TryParse(txtCantidad.Text, out Cantidad);
             oProductoBLL.Cantidad = Cantidad;
+            //COnsultas
+           // oProductoBLL.BusNom = txtBusNom.Text;
 
             return oProductoBLL;
         }
@@ -61,6 +64,17 @@ namespace Tienda.PL
         {
             oProductosDAL.Eliminar(RecuperarInformacion());
             dgvConsultas.DataSource = oProductosDAL.MostrarProductos().Tables[0];
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            oProductosDAL.Modificar(RecuperarInformacion());
+            dgvConsultas.DataSource = oProductosDAL.MostrarProductos().Tables[0];
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            dgvConsultas.DataSource = oProductosDAL.nombres().Tables[0];
         }
     }
 }

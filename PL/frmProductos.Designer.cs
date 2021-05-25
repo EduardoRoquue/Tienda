@@ -40,9 +40,8 @@ namespace Tienda.PL
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
-            this.cmbConsulta = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +49,7 @@ namespace Tienda.PL
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 48);
+            this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -59,7 +58,7 @@ namespace Tienda.PL
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 48);
+            this.label2.Location = new System.Drawing.Point(100, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 1;
@@ -68,7 +67,7 @@ namespace Tienda.PL
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(268, 48);
+            this.label3.Location = new System.Drawing.Point(268, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -77,7 +76,7 @@ namespace Tienda.PL
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(363, 48);
+            this.label4.Location = new System.Drawing.Point(363, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 3;
@@ -85,35 +84,35 @@ namespace Tienda.PL
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(12, 64);
+            this.txtID.Location = new System.Drawing.Point(12, 23);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(75, 20);
             this.txtID.TabIndex = 4;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(103, 64);
+            this.txtNombre.Location = new System.Drawing.Point(103, 23);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(271, 64);
+            this.txtPrecio.Location = new System.Drawing.Point(271, 23);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(75, 20);
             this.txtPrecio.TabIndex = 6;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(366, 64);
+            this.txtCantidad.Location = new System.Drawing.Point(366, 23);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(75, 20);
             this.txtCantidad.TabIndex = 7;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(12, 90);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 49);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 8;
@@ -123,16 +122,17 @@ namespace Tienda.PL
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(103, 90);
+            this.btnModificar.Location = new System.Drawing.Point(103, 49);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 9;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(271, 90);
+            this.btnBorrar.Location = new System.Drawing.Point(271, 49);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnBorrar.TabIndex = 10;
@@ -140,50 +140,42 @@ namespace Tienda.PL
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // btnCancelar
+            // btnConsultar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(366, 90);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Consultar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Location = new System.Drawing.Point(12, 92);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(93, 56);
+            this.btnConsultar.TabIndex = 11;
+            this.btnConsultar.Text = "MOSTRAR NOMBRES";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dgvConsultas
             // 
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.Location = new System.Drawing.Point(12, 119);
+            this.dgvConsultas.Location = new System.Drawing.Point(3, 154);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.Size = new System.Drawing.Size(449, 182);
             this.dgvConsultas.TabIndex = 12;
             this.dgvConsultas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar);
             // 
-            // cmbConsulta
-            // 
-            this.cmbConsulta.FormattingEnabled = true;
-            this.cmbConsulta.Location = new System.Drawing.Point(12, 19);
-            this.cmbConsulta.Name = "cmbConsulta";
-            this.cmbConsulta.Size = new System.Drawing.Size(121, 21);
-            this.cmbConsulta.TabIndex = 13;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 3);
+            this.label5.Location = new System.Drawing.Point(9, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Tipo de consulta";
+            this.label5.Size = new System.Drawing.Size(140, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "METODOS DE CONSULTA";
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 323);
+            this.ClientSize = new System.Drawing.Size(479, 350);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cmbConsulta);
             this.Controls.Add(this.dgvConsultas);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -216,9 +208,8 @@ namespace Tienda.PL
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView dgvConsultas;
-        private System.Windows.Forms.ComboBox cmbConsulta;
         private System.Windows.Forms.Label label5;
     }
 }

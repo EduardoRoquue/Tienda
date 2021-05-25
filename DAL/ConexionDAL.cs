@@ -38,8 +38,8 @@ namespace Tienda.DAL
                 return false;
             }
         }
-
-        //SELECT
+       
+        //
         public DataSet EjecutarSentencia(SqlCommand sqlComando)
         {
             DataSet DS = new DataSet();
