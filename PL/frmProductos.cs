@@ -72,8 +72,9 @@ namespace Tienda.PL
             dgvConsultas.DataSource = oProductosDAL.MostrarProductos().Tables[0];
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
+            oProductosDAL.Consulta(RecuperarInformacion());
             dgvConsultas.DataSource = oProductosDAL.nombres().Tables[0];
         }
     }

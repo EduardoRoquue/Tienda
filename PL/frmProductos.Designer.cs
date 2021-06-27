@@ -40,9 +40,10 @@ namespace Tienda.PL
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtMetCon = new System.Windows.Forms.TextBox();
+            this.btnConsultar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,20 +141,10 @@ namespace Tienda.PL
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Location = new System.Drawing.Point(12, 92);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(93, 56);
-            this.btnConsultar.TabIndex = 11;
-            this.btnConsultar.Text = "MOSTRAR NOMBRES";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // dgvConsultas
             // 
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.Location = new System.Drawing.Point(3, 154);
+            this.dgvConsultas.Location = new System.Drawing.Point(12, 180);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.Size = new System.Drawing.Size(449, 182);
             this.dgvConsultas.TabIndex = 12;
@@ -168,14 +159,32 @@ namespace Tienda.PL
             this.label5.TabIndex = 16;
             this.label5.Text = "METODOS DE CONSULTA";
             // 
+            // txtMetCon
+            // 
+            this.txtMetCon.Location = new System.Drawing.Point(12, 92);
+            this.txtMetCon.Name = "txtMetCon";
+            this.txtMetCon.Size = new System.Drawing.Size(148, 20);
+            this.txtMetCon.TabIndex = 17;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Location = new System.Drawing.Point(13, 119);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(82, 23);
+            this.btnConsultar.TabIndex = 18;
+            this.btnConsultar.Text = "CONSULTAR";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 350);
+            this.ClientSize = new System.Drawing.Size(479, 370);
+            this.Controls.Add(this.btnConsultar);
+            this.Controls.Add(this.txtMetCon);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvConsultas);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -208,8 +217,9 @@ namespace Tienda.PL
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView dgvConsultas;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtMetCon;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }
